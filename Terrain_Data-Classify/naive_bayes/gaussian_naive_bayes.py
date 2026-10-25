@@ -31,11 +31,11 @@ classifier = GaussianNB()
 # Fit the Classifier on the training features and labels
 classifier = classifier.fit(features_train, labels_train)
 
-    # Use the trained classifier to predict labels for the test features
-    prediction = classifier.predict(features_test)
+# Use the trained classifier to predict labels for the test features
+prediction = classifier.predict(features_test)
 
-    # Calculate and return the accuracy on the test data
-    accuracy = classifier.score(features_test, labels_test)
+# Calculate and return the accuracy on the test data
+accuracy = classifier.score(features_test, labels_test)
 
 # Draw the decision boundary with the text points overlaid
 prettyPicture(classifier, features_test, labels_test)
