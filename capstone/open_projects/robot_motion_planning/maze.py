@@ -49,10 +49,10 @@ class Maze(object):
             for cell, wall_type in wall_errors:
                 if wall_type == 'v':
                     cell2 = (cell[0]+1, cell[1])
-                    print 'Inconsistent vertical wall betweeen {} and {}'.format(cell, cell2)
+                    print('Inconsistent vertical wall betweeen {} and {}'.format(cell, cell2))
                 else:
                     cell2 = (cell[0], cell[1]+1)
-                    print 'Inconsistent horizontal wall betweeen {} and {}'.format(cell, cell2)
+                    print('Inconsistent horizontal wall betweeen {} and {}'.format(cell, cell2))
             raise Exception('Consistency errors found in wall specifications!')
 
 
@@ -68,7 +68,7 @@ class Maze(object):
         try:
             return (self.walls[tuple(cell)] & dir_int[direction] != 0)
         except:
-            print 'Invalid direction provided!'
+            print('Invalid direction provided!')
 
 
     def dist_to_wall(self, cell, direction):
